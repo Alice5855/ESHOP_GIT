@@ -12,6 +12,7 @@
 
     <title>HS ELECTRIC LOGIN</title>
 
+	<link href="${context}/css/sass/jumbotromimg.css" rel="stylesheet">
     <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
     <link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
     <link href="${context}/css/sb-admin-2.css" rel="stylesheet">

@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="main.jsp">
 <title>HS STATIONERY</title>
+<link href="${context}/css/sass/test.css" rel="stylesheet">
 <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 <link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 <script src="${context}/js/jquery-1.9.1.js"></script>
@@ -116,6 +117,7 @@
 				<div class="page-header">
 					<h1>필기류</h1>
 				</div>
+				<div class="jumbotron">
 					<div class="row">
 						<c:forEach items="${dsPenList}" var="dsPenList" varStatus="penIdx">
 							<div class="col-md-3">
@@ -126,6 +128,7 @@
 							</div>
 						</c:forEach>
 					</div>
+				</div>
 			</div>
 			<div class="container">
 				<div class="page-header">
