@@ -7,6 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ESHOP 쇼핑몰 프로그램</title>
+<link href="${context}/css/fonts.css" rel="stylesheet">
+<style type="text/css">
+	footer{font-family: 'noto sans kr' !important}
+</style>
 </head>
 <body>
 <div class="container">

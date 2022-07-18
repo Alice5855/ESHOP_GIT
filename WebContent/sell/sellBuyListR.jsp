@@ -9,8 +9,9 @@
 	<meta name="description" content="sellBuyListR.jsp">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>문구점</title>
+	<title>HS STATIONERY</title>
 
+	<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -49,8 +50,8 @@
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
 	<div id="jumbotron" class="container">
-		<div class="jumbotron jumbotron-info" style="background-color: lightgray;">
-			<h1><font color="black"><strong>구매내역</strong>&nbsp;<i class="fa fa-credit-card fa-1x"></i></font></h1>
+		<div class="jumbotron jumbotron-info">
+			<h1><strong>구매내역</strong>&nbsp;<i class="fa fa-credit-card fa-1x"></i></h1>
 			<p>${sessionScope.id}님의 구매내역입니다.</p>
 		</div>
 
@@ -103,7 +104,7 @@
 			                            <td style="text-align: center; vertical-align: middle;">${dsBuyList.SELL_COUNT}</td>
 			                            <td style="text-align: center; vertical-align: middle;">${dsBuyList.SELL_PRICE}원</td>
 			                            <td style="text-align: center; vertical-align: middle;">
-			                            	<button type="button" class="btn btn-warning" onclick="fn_review('${dsBuyList.PRODUCT_CODE}')">상품평 쓰러가기</button>
+			                            	<button type="button" class="btn btn-danger" onclick="fn_review('${dsBuyList.PRODUCT_CODE}')">상품평 쓰러가기</button>
 			                            </td>
 			                         </tr>
 			                        </c:forEach>

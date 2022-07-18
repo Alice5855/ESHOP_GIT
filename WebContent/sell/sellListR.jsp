@@ -9,8 +9,9 @@
 	<meta name="description" content="sellListR.jsp">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>문구점</title>
+	<title>HS STATIONERY</title>
 
+	<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -93,8 +94,8 @@
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
 	<div id="jumbotron" class="container">
-		<div class="jumbotron jumbotron-info" style="background-color: lightgray;">
-			<h1><font color="black"><strong>주문정보</strong>&nbsp;<i class="fa fa-credit-card fa-1x"></i></font></h1>
+		<div class="jumbotron jumbotron-info">
+			<h1><strong>주문정보</strong>&nbsp;<i class="fa fa-credit-card fa-1x"></i></h1>
 			<p>주문 정보를 확인해주세요</p>
 		</div>
 

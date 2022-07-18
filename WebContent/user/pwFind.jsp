@@ -7,7 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="description" content="pwFind.jsp">
-<title>Insert title here</title>
+<title>HS STATIONERY LOGIN</title>
+<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/bootstrap-theme.css" rel="stylesheet">
 <link href="../css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -55,8 +56,8 @@
 <body>
 	<jsp:include page="../common/top.jsp"></jsp:include>
 	<div class="container">
-		<div class="jumbotron jumbotron-info" style="background-color: lightgray;">
-			<h1><font color="black"><strong>PW찾기</strong>&nbsp;<span class="glyphicon glyphicon glyphicon-pencil"></span></font></h1>
+		<div class="jumbotron jumbotron-info">
+			<h1><strong>PW찾기</strong>&nbsp;<span class="glyphicon glyphicon glyphicon-pencil"></span></h1>
 		</div>
 	</div>
 	<div class="container">
@@ -76,7 +77,7 @@
 					<input class="form-control" type="email" name="email" id="email"/>
 				</div>
 				<div class="col-md-2">
-					<input class="btn btn-default" type="button" name="btnSubmit" id="btnSubmit" value="확인" onclick="retrieveUserPw()"/>
+					<input class="btn btn-danger" type="button" name="btnSubmit" id="btnSubmit" value="확인" onclick="retrieveUserPw()"/>
 				</div>
 			</div>
 			<div class="form-group" id="message">

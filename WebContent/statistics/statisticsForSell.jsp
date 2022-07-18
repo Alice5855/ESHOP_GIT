@@ -9,8 +9,9 @@
 	<meta name="description" content="statisticsForSell.jsp">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>문구점</title>
-
+	<title>HS STATIONERY</title>
+	
+	<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -81,8 +82,8 @@
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
 	<div class="container">
-		<div class="jumbotron jumbotron-info" style="background-color: lightgray;">
-			<h1><font color="black"><strong>매출통계</strong>&nbsp;<span class="glyphicon glyphicon-signal"></span></font></h1>
+		<div class="jumbotron jumbotron-info">
+			<h1><strong>매출통계</strong>&nbsp;<span class="glyphicon glyphicon-signal"></span></h1>
 			<p>매출통계 페이지입니다.</p>
 		</div>
 

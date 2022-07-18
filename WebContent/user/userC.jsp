@@ -7,7 +7,8 @@
 <head>
 		<meta name="description" content="userC.jsp">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Insert title here</title>
+	<title>HS STATIONERY LOGIN</title>
+	<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -166,9 +167,9 @@
 <body>
 <jsp:include page="../common/top.jsp"></jsp:include>
 	<div id="jumbotron" class="container">
-		<div class="jumbotron jumbotron-info" style="background-color: lightgray;">
-			<h1><font color="black"><strong>회원가입</strong>&nbsp;<span class="glyphicon glyphicon glyphicon-pencil"></span></font></h1>
-			<p>HS STATIONERY 회원가입을 진심으로 환영합니다.</p>
+		<div class="jumbotron jumbotron-info">
+			<h1><strong>회원가입</strong>&nbsp;<span class="glyphicon glyphicon glyphicon-pencil"></span></h1>
+			<p>HS STATIONERY에 오신것을 진심으로 환영합니다</p>
 		</div>
 	</div>
 	<div class="container">
@@ -279,10 +280,10 @@
 		<br><br><br>
 		<div class="form-group">
 			<div class="col-md-offset-6 col-md-1">
-				<button type="button" class="btn btn-success" onclick="fn_back()">뒤로가기</button>
+				<button type="button" class="btn btn-warning" onclick="fn_back()">뒤로가기</button>
 			</div>
 			<div class="col-md-1">
-				<button class="btn btn-primary" type="button" name="btnSubmit" id="btnSubmit" onclick="fn_save()">등록하기</button>
+				<button class="btn btn-danger" type="button" name="btnSubmit" id="btnSubmit" onclick="fn_save()">등록하기</button>
 			</div>
 		</div>
 	</form>
@@ -296,7 +297,7 @@
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">주소검색</h4>
 					</div>
-						<div class="modal-body" style="height: 50px;">
+						<div class="modal-body" style="height: 100px;">
 							<div class="col-md-6">
 								<input class="form-control" type="text" id="dong" name="dong" placeholder="동을 입력하세요.ex)역삼1동"/>
 							</div>

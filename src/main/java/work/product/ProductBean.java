@@ -3,7 +3,7 @@ package work.product;
 import java.io.Serializable;
 
 public class ProductBean implements Serializable{
-	private String productCode;        //제품코두
+	private String productCode;        //제품코드
 	private String productImage;       //제품이미지
 	private String productName;        //제품이름
  	private int productUnitPrice;      //제품단가

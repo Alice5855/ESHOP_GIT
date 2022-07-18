@@ -8,6 +8,11 @@
 <meta charset="UTF-8">
 <meta name="description" content="main.jsp">
 <title>HS STATIONERY</title>
+<style type="text/css">
+	body{background: unset !important;}
+	.carousel-control.right{background-image: unset !important;}
+	.carousel-control.left{background-image: unset !important;}
+</style>
 <link href="${context}/css/sass/test.css" rel="stylesheet">
 <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 <link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
@@ -90,7 +95,7 @@
 					<div class="row">
 						<c:forEach items="${dsDesignList}" var="dsDesignList">
 							<div class="col-md-3">
-								<a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${designUrl}')"><img src="${context}/designImg/${dsDesignList.PRODUCT_IMAGE}" class="img-circle" width="100%" height="100%"></a>
+								<a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${designUrl}')"><img src="${context}/designImg/${dsDesignList.PRODUCT_IMAGE}" class="img-thumbnail" width="100%" height="100%"></a>
 							</div>
 						</c:forEach>
 					</div>
@@ -149,17 +154,17 @@
 			<div class="container" style="margin-top: 10%; margin-bottom: 10%">
 				<div class="row">
 					<div class="col-md-4">
-					    <a href="${productManageUrl}" class="btn btn-primary" style="width: 100%; height: 250px;" role="button">
+					    <a href="${productManageUrl}" class="btn btn-success" style="width: 100%; height: 250px;" role="button">
 							<h1><span class="glyphicon glyphicon-list-alt" style="font-size: 80px; margin-top: 5%;"></span> <br/>재고관리</h1>
 						</a>
 					</div>
 					<div class="col-md-4">
-					    <a href="${statisticsForProductUrl}" class="btn btn-danger" style="width: 100%; height: 250px;" role="button">
+					    <a href="${statisticsForProductUrl}" class="btn btn-warning" style="width: 100%; height: 250px;" role="button">
 							<h1><span class="glyphicon glyphicon-signal" style="font-size: 80px; margin-top: 5%;"></span> <br/>매출통계</h1>
 					    </a>
 					</div>
 					<div class="col-md-4">
-					    <a href="${statisticsForStockUrl}" class="btn btn-info" style="width: 100%; height: 250px;" role="button">
+					    <a href="${statisticsForStockUrl}" class="btn btn-danger" style="width: 100%; height: 250px;" role="button">
 							<h1><span class="glyphicon glyphicon-eye-open" style="font-size: 80px; margin-top: 5%;"></span> <br/>재고현황</h1>
 		    		    </a>
 					</div>

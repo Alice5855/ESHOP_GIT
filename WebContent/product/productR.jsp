@@ -8,7 +8,7 @@
 <head>
 	<meta name="description" content="productR.jsp">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Insert title here</title>
+	<title>HS STATIONERY</title>
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -168,7 +168,7 @@
 <jsp:include page="../common/top.jsp"></jsp:include>
 	<div class="container">
       <div class="row">
-          <div class="panel panel-default">
+          <div class="panel panel-danger">
            <div class="panel-heading">
               <h3 class="panel-title"><b>[&nbsp;${dsProduct.PRODUCT_CATEGORY_CD_NM}&nbsp;]${dsProduct.PRODUCT_NAME}</b></h3>
             </div>
@@ -240,7 +240,7 @@
                   </table>
                   <br><br>
                   <div>
-                	  <button id ="buyBtn" type="button" class="btn btn-primary btn-lg" onclick="fn_buy()"><i class="fa fa-credit-card fa-2x">&nbsp;바로구매</i></button>
+                	  <button id ="buyBtn" type="button" class="btn btn-danger btn-lg" onclick="fn_buy()"><i class="fa fa-credit-card fa-2x">&nbsp;바로구매</i></button>
                       <button id ="cartBtn" type="button" class="btn btn-warning btn-lg" onclick="fn_cart()"><i class="fa fa-shopping-cart fa-2x">&nbsp;장바구니</i></button>
                   </div>
                 </div>
@@ -286,7 +286,7 @@
 <div class="container">
 		<div class="row">
 			<div class="col-md-12 toppad">
-				<div class="panel panel-info">
+				<div class="panel panel-warning">
 					<div class="panel-heading">
 						<h1 class="panel-title">상품평  ${dsReplyList[0].REPLY_COUNT}</h1>
 					</div>
@@ -324,7 +324,7 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-success btn-lg" style="float: right;" onclick="fn_back()">뒤로가기</button>
+      <button class="btn btn-primary btn-lg" style="float: right;" onclick="fn_back()">뒤로가기</button>
     </div>
 	<jsp:include page="../common/foot.jsp"></jsp:include>
 </body>

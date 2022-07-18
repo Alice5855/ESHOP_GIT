@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ESHOP 쇼핑몰 프로그램</title>
+<link href="${context}/css/fonts.css" rel="stylesheet">
 <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 <link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 <link href="${context}/css/common.css" rel="stylesheet">
@@ -19,6 +20,7 @@ li{
 a{
 	text-decoration:none !important;
 }
+#cfont{font-family: 'noto sans kr' !important;}
 </style>
 </head>
 
@@ -32,7 +34,7 @@ a{
 <c:set var="designUrl">${context}/work/product/retrieveProductList.do?category=D</c:set>
 <c:set var="storageUrl">${context}/work/product/retrieveProductList.do?category=S</c:set>
 <body>
-	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+	<nav id="cfont" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 		<div class="container" style="background-color: black;">
 			<ul class="nav navbar-nav">
 				<li><a href="${homeUrl}"><font color="white"><strong>HS STATIONERY</strong></font></a></li>
@@ -76,7 +78,7 @@ a{
 			</ul>
 		</div>
 	</nav>
-		<div class="container" style="background-color: white; margin-bottom: 2%;">
+		<div id="cfont" class="container" style="background-color: white; margin-bottom: 2%;">
 		<c:if test="${sessionScope.grade != 'A'}">
 		  	<p style="font-size: 70px;"><a href="${context}/work/product/goMain.do" style="color: black;"><b>HS STATIONERY</b></a></p>
 		  <ul class="list-inline">

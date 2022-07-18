@@ -9,8 +9,9 @@
 	<meta name="description" content="cartListR.jsp">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>문구점</title>
+	<title>HS STATIONERY</title>
 
+	<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="${context}/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -57,8 +58,8 @@
 <body>
 <jsp:include page="/common/top.jsp"></jsp:include>
 	<div id="jumbotron" class="container">
-		<div class="jumbotron jumbotron-info" style="background-color: lightgray;">
-			<h1><font color="black"><strong>장바구니</strong>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></font></h1>
+		<div class="jumbotron jumbotron-info">
+			<h1><strong>장바구니</strong>&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></h1>
 			<p>${sessionScope.id}님의 장바구니입니다.</p>
 		</div>
 
@@ -71,12 +72,12 @@
 			                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
 			                    <thead>
 			                        <tr>
-			                        	<th style="text-align: center; vertical-align: middle; width: 10px;">No</th>
-			                            <th style="text-align: center; vertical-align: middle; width: 20px;">상품이미지</th>
-			                            <th style="text-align: center; vertical-align: middle; width: 50px;">상품이름</th>
-			                            <th style="text-align: center; vertical-align: middle; width: 20px;">상품단가</th>
-			                            <th style="text-align: center; vertical-align: middle; width: 40px;">상품수량</th>
-			                            <th style="text-align: center; vertical-align: middle; width: 30px;">결제금액</th>
+			                        	<th style="text-align: center; vertical-align: middle; width: 5px;">No</th>
+			                            <th style="text-align: center; vertical-align: middle; width: 20px;">이미지</th>
+			                            <th style="text-align: center; vertical-align: middle; width: 35px;">이름</th>
+			                            <th style="text-align: center; vertical-align: middle; width: 15px;">단가</th>
+			                            <th style="text-align: center; vertical-align: middle; width: 10px;">수량</th>
+			                            <th style="text-align: center; vertical-align: middle; width: 15px;">결제금액</th>
 			                            <th style="text-align: center; vertical-align: middle; width: 30px;">구매 / 삭제</th>
 			                        </tr>
 			                    </thead>
@@ -113,8 +114,8 @@
 			                            <td style="text-align: center; vertical-align: middle;">${dsCartList.CART_COUNT}</td>
 			                            <td style="text-align: center; vertical-align: middle;">${dsCartList.CART_PRICE}원</td>
 			                            <td style="text-align: center; vertical-align: middle;">
-			                            	<button type="button" class="btn btn-primary" onclick="fn_buy('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_PRICE}', '${dsCartList.CART_COUNT}')">구매</button>
-			                            	<button type="button" class="btn btn-danger" onclick="fn_delete('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_COUNT}')">삭제</button>
+			                            	<button type="button" class="btn btn-danger" onclick="fn_buy('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_PRICE}', '${dsCartList.CART_COUNT}')">구매</button>
+			                            	<button type="button" class="btn btn-warning" onclick="fn_delete('${dsCartList.CART_CODE}', '${dsCartList.PRODUCT_CODE}', '${dsCartList.CART_COUNT}')">삭제</button>
 			                            </td>
 			                         </tr>
 			                        </c:forEach>
