@@ -269,9 +269,9 @@
 			                        <c:if test="${dsProduct.MARK_YN == 'N'}">
 			                            <div class="stars starrr" data-rating="0"></div>
 			                        </c:if>
-		                            <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+		                            <a class="btn btn-warning btn-lg" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
 		                            <span class="glyphicon glyphicon-remove"></span>Cancel</a>
-		                            <button class="btn btn-success btn-lg" onclick="return fn_save()">Save</button>
+		                            <button class="btn btn-danger btn-lg" onclick="return fn_save()">Save</button>
 		                        </div>
 		                        <input type="hidden" id="productCode" name="productCode" value="${dsProduct.PRODUCT_CODE}">
 		                        <input type="hidden" id="markYn" name="markYn" value="${dsProduct.MARK_YN}">
