@@ -21,6 +21,8 @@ a{
 	text-decoration:none !important;
 }
 #cfont{font-family: 'noto sans kr' !important;}
+#ccolour{background-color: #606060 !important;}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus { background-image:none !important; } .navbar-nav > li > a:hover, .navbar-nav > li > a:focus { background-color:#e37b2f !important; }
 </style>
 </head>
 
@@ -35,11 +37,11 @@ a{
 <c:set var="storageUrl">${context}/work/product/retrieveProductList.do?category=S</c:set>
 <body>
 	<nav id="cfont" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-		<div class="container" style="background-color: black;">
-			<ul class="nav navbar-nav">
+		<div id="ccolour" class="container" style="background-color: black;">
+			<ul id="ccolour" class="nav navbar-nav">
 				<li><a href="${homeUrl}"><font color="white"><strong>HS STATIONERY</strong></font></a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
+			<ul id="ccolour" class="nav navbar-nav navbar-right">
 				<li>
 					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
 						<a href="${context}/work/cart/retrieveCartList.do"><font color="white"><strong>장바구니</strong></font></a>

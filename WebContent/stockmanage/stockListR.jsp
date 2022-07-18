@@ -61,7 +61,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="page-header" style="float: right;">
-					  <button type="button" class="btn btn-info btn-lg" onclick="fn_createProduct()">제품추가</button>
+					  <button type="button" class="btn btn-warning btn-lg" onclick="fn_createProduct()">제품추가</button>
 				</div>
 			</div>
 			<div class="col-md-12">
@@ -112,7 +112,7 @@
 			                            <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_UNIT_PRICE}원</td>
 			                            <td style="text-align: center; vertical-align: middle;">${dsProductList.PRODUCT_COUNT}</td>
 			                            <td style="text-align: center; vertical-align: middle;">
-			                            	<button type="button" class="btn btn-warning" onclick="fn_modifyProduct('${dsProductList.PRODUCT_CODE}')">정보변경</button>
+			                            	<button type="button" class="btn btn-danger" onclick="fn_modifyProduct('${dsProductList.PRODUCT_CODE}')">정보변경</button>
 			                            </td>
 			                         </tr>
 			                        </c:forEach>

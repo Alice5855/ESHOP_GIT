@@ -21,7 +21,7 @@ a{
 #plusCert { cursor: pointer;}
 #minusCert { cursor: pointer;}
 .navbar-nav{
-	background-color: black;
+	background-color: #808080;
 }
 .navbar-brand{
 	background-color: #6633FF;
