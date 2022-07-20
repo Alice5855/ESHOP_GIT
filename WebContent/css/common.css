@@ -104,6 +104,11 @@ a{
 	width:20px;
 	height:20px;
 	border-radius:20px;
+	opacity: 0.3;
+}
+
+.carousel-indicators li:hover{
+	opacity: 0.8;
 }
 
 .carousel-indicators .active {
