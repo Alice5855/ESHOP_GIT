@@ -1,4 +1,4 @@
-@charset="utf-8";
+@charset "utf-8";
 
 body {
 	background: url('../backgroundImage/blueSky.jpg');
@@ -99,7 +99,7 @@ a{
 }
 
 .carousel-indicators li{
-	background-color : #E0E0E0;
+	background-color : #606060;
 	border: none;
 	width:20px;
 	height:20px;
@@ -107,7 +107,7 @@ a{
 }
 
 .carousel-indicators .active {
-	background-color : #66FFFF;
+	background-color : #e37b2f;
 	width: 20px;
 	height: 20px;
 	margin: 0;

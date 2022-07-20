@@ -7,7 +7,7 @@
 <head>
 		<meta name="description" content="userU.jsp">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>HS STATIONERY LOGIN</title>
+	<title>HS STATIONERY</title>
 	<link href="${context}/css/sass/jumbotronimg.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${context}/css/bootstrap-theme.css" rel="stylesheet">
