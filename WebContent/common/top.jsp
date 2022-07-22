@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ESHOP 쇼핑몰 프로그램</title>
 <link href="${context}/css/fonts.css" rel="stylesheet">
 <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
@@ -14,15 +15,26 @@
 <script src="${context}/js/common.js"></script>
 <script src="${context}/js/bootstrap.min.js"></script>
 <style type="text/css">
-li{
-	cursor: pointer;
-}
-a{
-	text-decoration:none !important;
-}
-#cfont{font-family: 'noto sans kr' !important;}
-#ccolour{background-color: #606060 !important;}
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus { background-image:none !important; } .navbar-nav > li > a:hover, .navbar-nav > li > a:focus { background-color:#e37b2f !important; }
+	li{
+		cursor: pointer;
+	}
+	a{
+		text-decoration:none !important;
+	}
+	#cfont{font-family: 'noto sans kr' !important;}
+	#ccolour{background-color: #606060 !important;}
+	nav{display:block !important;}
+	.nhead{
+		position: relative;
+		height: 100%;
+    	display: inline-block;
+   		padding: 15px 15px;
+		text-align: center;
+		padding-top: 15px;
+    	line-height: 20px;
+    	box-sizing: border-box;
+	}
+	.nav a:hover, .nav a:focus { background-image:none !important; } .nav a:hover, .nav a:focus { background-color:#e37b2f !important; }
 </style>
 </head>
 
@@ -36,53 +48,64 @@ a{
 <c:set var="designUrl">${context}/work/product/retrieveProductList.do?category=D</c:set>
 <c:set var="storageUrl">${context}/work/product/retrieveProductList.do?category=S</c:set>
 <body>
-	<nav id="cfont" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-		<div id="ccolour" class="container" style="background-color: black;">
-			<ul id="ccolour" class="nav navbar-nav">
-				<li><a href="${homeUrl}"><font color="white"><strong>HS STATIONERY</strong></font></a></li>
-			</ul>
-			<ul id="ccolour" class="nav navbar-nav navbar-right">
-				<li>
-					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-						<a href="${context}/work/cart/retrieveCartList.do"><font color="white"><strong>장바구니</strong></font></a>
-					</c:if>
-					<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-						<a href="${context}/work/product/retrieveProductListForManage.do"><font color="white"><strong>재고관리</strong></font></a>
-					</c:if>
-				</li>
-				<li>
-					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-						<a href="${context}/work/sell/retrieveBuyList.do"><font color="white"><strong>구매내역</strong></font></a>
-					</c:if>
-					<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-						<a href="${context}/work/sell/retrieveStatisticsForProduct.do"><font color="white"><strong>매출통계</strong></font></a>
-					</c:if>
-				</li>
-				<li>
-					<c:if test="${sessionScope.id == null}">
-						<a href="${context}/work/user/createUser.do"><font color="white"><strong>회원가입</strong></font></a>
-					</c:if>
-					<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
-						<a href="${context}/work/user/updateUser.do"><font color="white"><strong>정보수정</strong></font></a>
-					</c:if>
-					<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
-						<a href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P"><font color="white"><strong>재고현황</strong></font></a>
-					</c:if>
-				</li>
-				<li>
-					<c:if test="${sessionScope.id == null}">
-						<a href="${context}/user/login.jsp"><font color="white"><strong>LOGIN</strong></font></a>
-					</c:if>
-					<c:if test="${sessionScope.id != null}">
-						<a href="${context}/work/user/logout.do"><font color="white"><strong>LOGOUT</strong></font></a>
-					</c:if>
-				</li>
-			</ul>
+
+	<nav id="cfont" class="navbar navbar-default" role="navigation">
+		<div id="ccolour" class="container-fluid">
+			<div id="ccolour" class="nav navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	              <span class="sr-only">Toggle navigation</span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
+				<a href="${homeUrl}" class="nhead"><font color="white"><strong>HS STATIONERY</strong></font></a>
+			</div>
+			
+			<div id="navbar" class="navbar-collapse collapse">
+
+				<ul id="ccolour" class="nav navbar-nav navbar-right">
+					<li>
+						<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+							<a href="${context}/work/cart/retrieveCartList.do"><font color="white"><strong>장바구니</strong></font></a>
+						</c:if>
+						<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
+							<a href="${context}/work/product/retrieveProductListForManage.do"><font color="white"><strong>재고관리</strong></font></a>
+						</c:if>
+					</li>
+					<li>
+						<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+							<a href="${context}/work/sell/retrieveBuyList.do"><font color="white"><strong>구매내역</strong></font></a>
+						</c:if>
+						<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
+							<a href="${context}/work/sell/retrieveStatisticsForProduct.do"><font color="white"><strong>매출통계</strong></font></a>
+						</c:if>
+					</li>
+					<li>
+						<c:if test="${sessionScope.id == null}">
+							<a href="${context}/work/user/createUser.do"><font color="white"><strong>회원가입</strong></font></a>
+						</c:if>
+						<c:if test="${sessionScope.id != null && sessionScope.grade != 'A'}">
+							<a href="${context}/work/user/updateUser.do"><font color="white"><strong>정보수정</strong></font></a>
+						</c:if>
+						<c:if test="${sessionScope.id != null && sessionScope.grade == 'A'}">
+							<a href="${context}/work/product/retrieveStatisticsForStock.do?productCategoryCd=P"><font color="white"><strong>재고현황</strong></font></a>
+						</c:if>
+					</li>
+					<li>
+						<c:if test="${sessionScope.id == null}">
+							<a href="${context}/user/login.jsp"><font color="white"><strong>LOGIN</strong></font></a>
+						</c:if>
+						<c:if test="${sessionScope.id != null}">
+							<a href="${context}/work/user/logout.do"><font color="white"><strong>LOGOUT</strong></font></a>
+						</c:if>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 		<div id="cfont" class="container" style="background-color: white; margin-bottom: 2%;">
 		<c:if test="${sessionScope.grade != 'A'}">
-		  	<p style="font-size: 70px;"><a href="${context}/work/product/goMain.do" style="color: black;"><b>HS STATIONERY</b></a></p>
+		  	<p style="font-size: 5.5rem; font-weight: bold; width:inherit;"><a href="${context}/work/product/goMain.do" style="color: black;">HS STATIONERY</a></p>
 		  <ul class="list-inline">
 		    <li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${penUrl}')" style="color: black; font-size: 25px;">필기류&nbsp;&nbsp;|</a></li>
 		    <li><a onclick="javascript:fn_isLogin('${sessionScope.userCode}','${loginUrl}','${officeUrl}')" style="color: black; font-size: 25px;">사무용품&nbsp;&nbsp;|</a></li>

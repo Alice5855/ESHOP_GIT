@@ -7,11 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="main.jsp">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HS STATIONERY</title>
 <style type="text/css">
 	body{background: unset !important;}
 	.carousel-control.right{background-image: unset !important;}
 	.carousel-control.left{background-image: unset !important;}
+	#CarouselWrapper{max-width: 1200px; margin: 0 auto;}
 </style>
 <link href="${context}/css/sass/test.css" rel="stylesheet">
 <link href="${context}/css/bootstrap.min.css" rel="stylesheet">
@@ -34,9 +36,9 @@
 
 <script type="text/javascript"></script>
 <body>
-<jsp:include page="../common/top.jsp"></jsp:include>
+	<jsp:include page="../common/top.jsp"></jsp:include>
 			<c:if test="${sessionScope.grade != 'A'}">
-				<div class="row">
+				<div id="CarouselWrapper" class="row">
 					<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 				    <!-- Indicators -->
 					<ol class="carousel-indicators">

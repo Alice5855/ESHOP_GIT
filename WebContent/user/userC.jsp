@@ -15,7 +15,7 @@
 	<link href="${context}/css/plugins/social-buttons.css" rel="stylesheet">
 	<link href="${context}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" >
-		<link href="${context}/css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="${context}/css/plugins/dataTables.bootstrap.css" rel="stylesheet">
     <link href="${context}/css/process.css" rel="stylesheet">
 
 	<script src="${context}/js/jquery-1.9.1.js"></script>
